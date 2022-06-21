@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How to Access Payara Micro Enterprise Binaries for Local Development :: Payara Cloud Documentation</title>
+    <meta name="generator" content="Antora 2.2.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@alpha" />
+    <meta name="docsearch:version" content="community-latest" />
+  </head>
+  <body class="article">
+  <header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Payara Cloud Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-item hide-for-print">
+        Version: <div class="page-versions">
+  <button class="version-menu-toggle single-version" title="Current version">21.11.0</button>
+</div>
+
+      </div>
+      <div class="navbar-item hide-for-print">
+            <div id="search-input-container">
+    </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.payara.fish/products/downloads/">Download</a>
+          </span>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary enterprise" href="../../../enterprise">Documentation for Payara Enterprise</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../Overview.html">Payara Cloud</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Getting%20Started.html">Getting Started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Getting%20Started.html#register">Register</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Getting%20Started.html#log-into-your-account">Log into Your Account</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Getting%20Started.html#create-a-namespace">Create a Namespace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Getting%20Started.html#upload-an-application">Upload an Application</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Getting%20Started.html#configure-your-application-for-deployment">Configure Your Application for Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Getting%20Started.html#microprofile-configuration-values">MicroProfile Configuration Values</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Getting%20Started.html#context-root">Context Root</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Getting%20Started.html#internet-accessible-paths">Internet Accessible Paths</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Getting%20Started.html#database-configuration">Database Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Getting%20Started.html#deploy-application">Deploy Application</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Getting%20Started.html#make-changes-to-your-applications-configuration-and-redeploy">Make Changes to Your Application&#8217;s Configuration and Redeploy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Getting%20Started.html#how-to-stop-an-application">How to Stop an Application</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../Getting%20Started.html#deploy-a-stopped-application">Deploy a Stopped Application</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../Logging.html">Logging</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Logging.html#heap-dumps">Heap Dumps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Logging.html#thread-dumps">Thread Dumps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../How%20to%20Use%20Custom%20Domains.html">How to Use Custom Domains</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../How%20to%20Access%20Payara%20Micro%20Binaries.html">How to Access Payara Micro Binaries</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../How%20to%20Access%20Payara%20Micro%20Binaries.html#verify-your-customer-support-portal-access">Verify Your Customer Support Portal Access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../How%20to%20Access%20Payara%20Micro%20Binaries.html#download-payara-micro-enterprise">Download Payara Micro Enterprise</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../Pricing.html">Pricing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../Account%20Management%20and%20How%20to%20View%20Current%20Usage.html">Account Management and How to View Current Usage</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://www.payara.fish/products/payara-cloud/#faq">Frequently Asked Questions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://www.youtube.com/playlist?list=PLFMhxiCgmMR-V2lVMRw3B7eV3gqvJshvh">Demo Videos</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Payara Cloud</span>
+    <span class="version">21.11.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Payara Cloud</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../Overview.html">21.11.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../Overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../Overview.html">Payara Cloud</a></li>
+    <li><a href="How%20to%20Access%20Payara%20Micro%20Binaries.html">How to Access Payara Micro Enterprise Binaries for Local Development</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/alanroth/Workspace/Payara-Cloud-Documentation/docs/modules/cli/pages/How%20to%20Access%20Payara%20Micro%20Binaries.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">How to Access Payara Micro Enterprise Binaries for Local Development</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Payara Cloud customers with a Premium subscription have access to Payara Micro Enterprise binaries to test their applications locally on the same environment they will use when they deploy to the cloud.</p>
+</div>
+<div class="paragraph">
+<p>As part of the Payara Cloud Premium subscription, you are entitled to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Full access to the Payara Customer support portal for raising support tickets for 2 users</p>
+</li>
+<li>
+<p>A single, shared Nexus repository account for your organisation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Sonatype Nexus</em> is a repository manager which we use to provide our Enterprise builds and private builds for Payara Micro. It also contains the binaries for our connectors (Cloud, Testing, Security, etc …), Docker Images, and IDE plugins which are tested with our Enterprise Edition software. The repository can also be used to store large files for your support tickets.</p>
+</div>
+<div class="paragraph">
+<p>By the time you receive this guide, accounts should have been created for you on these two key platforms.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="verify-your-customer-support-portal-access"><a class="anchor" href="#verify-your-customer-support-portal-access"></a>Verify Your Customer Support Portal Access</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You should have received an email with a link to create a password for your support portal account. Please click the link and set a password to be able to view your tickets on the web.</p>
+</div>
+<div class="paragraph">
+<p>If you would like to add/swap named contacts for your company, you may request to do so either through a support ticket or by emailing <a href="mailto:support@payara.fish">support@payara.fish. </a>The maximum number of Zendesk users for Payara Cloud support is 2.</p>
+</div>
+<div class="paragraph">
+<p><strong>Change Your Nexus Password</strong></p>
+</div>
+<div class="paragraph">
+<p>You should receive an email with your Nexus credentials, which contains a default password.
+Since email notifications are an inherently insecure communication method, it is your responsibility to change the password immediately.</p>
+</div>
+<div class="paragraph">
+<p>Use the generated password to log in to your account and change your password by clicking the profile option in the top-right corner of the user interface first, and then clicking on the <em>Change Password </em>button:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image36.png" alt="Graphical user interface" width="668" height="207">
+</div>
+</div>
+<div class="paragraph">
+<p>If there is something wrong with access to either of these, please send an email to</p>
+</div>
+<div class="paragraph">
+<p>support@payara.fish which will automatically create a ticket in our system and allow us to make sure you have everything you need.</p>
+</div>
+<div class="paragraph">
+<p>Please refer to the Payara Cloud Premium Customer Support Guide for details about how to raise a ticket for support.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="download-payara-micro-enterprise"><a class="anchor" href="#download-payara-micro-enterprise"></a>Download Payara Micro Enterprise</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All Payara Micro Enterprise downloads are made available on the official Nexus Server at</p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.payara.fish/" class="bare">https://nexus.payara.fish/</a></p>
+</div>
+<div class="paragraph">
+<p>Within Nexus, there should be five repositories visible, as shown below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/image37.png" alt="Graphical user interface Description automatically generated" width="693" height="192">
+</div>
+</div>
+<div class="paragraph">
+<p>Here is a summary of each repository’s purpose:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>payara-micro-enterprise</em></strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This repository is public to all customers and is used to host releases of Payara Enterprise distributions. New releases of Payara Enterprise will be pushed to this repository when available. This repository also contains the connectors (Cloud, Testing, Security, etc …), and IDE plugins.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>payara-patches</em></strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This repository is public to all customers and is used to host legacy patches builds of Payara Platform version 4.1.x and 5.x releases.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>payara-patches-${customer-name}</em></strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This repository is private to each customer and contains specific hotfix and/or patch builds of Payaira Enterprise distributions
+that were created for that customer on their request or to handle the resolution of a support ticket.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>${customer-name}</em></strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This repository is private to each customer and is reserved for the customer&#8217;s use to upload large files that are required for troubleshooting support tickets like JVM snapshots, profiling sessions compressed data, virtual machines, etc.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>zulu-jdk</em></strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This repository is public to each customer and hosts all new releases and patched for Zulu Enterprise JDK (OpenJDK) installer binaries.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/docSearch.js"></script>
+  </body>
+</html>
